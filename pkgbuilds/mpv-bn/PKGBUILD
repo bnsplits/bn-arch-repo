@@ -1,8 +1,7 @@
 # Maintainer: BnSplits <bnsp.x0@gmail.com>
-pkgname=mpv-bn-git
-_pkgname=mpv-bn
+pkgname=mpv-bn
 pkgver=0.41.0
-pkgrel=2
+pkgrel=3
 pkgdesc='a free, open source, and cross-platform media player'
 arch=('x86_64')
 license=('GPL-2.0-or-later AND LGPL-2.1-or-later')
@@ -19,7 +18,7 @@ makedepends=('git' 'meson' 'python-docutils' 'ladspa' 'wayland-protocols'
 optdepends=('yt-dlp: for video-sharing websites playback')
 provides=("mpv=${pkgver}" "mpv-git" "libmpv.so")
 options=('!emptydirs' '!debug')
-source=("git+https://github.com/BnSplits/${_pkgname}.git#tag=v${pkgver}")
+source=("git+https://github.com/BnSplits/${pkgname}.git#tag=v${pkgver}")
 sha256sums=('6fea424ffd70e73e490854dfdbd159c0391726c39ec26af161422ee4f4048449')
 conflicts=("mpv" "mpv-git")
 replaces=("mpv" "mpv-git")
@@ -42,7 +41,7 @@ build() {
     -Dsdl2-gamepad=enabled
   )
 
-  arch-meson "${_pkgname}" build "${_meson_options[@]}"
+  arch-meson "${pkgname}" build "${_meson_options[@]}"
 
   meson compile -C build
 }
@@ -63,10 +62,10 @@ package() {
   # delete private entries only required for static linking
   sed -i -e '/Requires.private/d' -e '/Libs.private/d' "${pkgdir}"/usr/lib/pkgconfig/mpv.pc
 
-  install -m0644 "${_pkgname}"/DOCS/{encoding.rst,tech-overview.txt} \
+  install -m0644 "${pkgname}"/DOCS/{encoding.rst,tech-overview.txt} \
     "${pkgdir}"/usr/share/doc/mpv
 
-  install -m0644 "${_pkgname}"/TOOLS/{umpv,mpv_identify.sh,stats-conv.py,idet.sh,lua/*} \
+  install -m0644 "${pkgname}"/TOOLS/{umpv,mpv_identify.sh,stats-conv.py,idet.sh,lua/*} \
     -D -t "${pkgdir}"/usr/share/mpv/scripts
 
   # Make umpv executable
