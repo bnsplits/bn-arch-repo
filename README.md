@@ -26,12 +26,12 @@ You can now install packages directly from this repository using `pacman`.
 
 ## Packages
 
-- [mpv-bn](https://github.com/BnSplits/mpv-bn)
 - [chromafade](https://github.com/BnSplits/chromafade)
 - [chromapick](https://github.com/BnSplits/chromapick)
 - [hypr-go-to-workspace](https://github.com/BnSplits/hypr-go-to-workspace)
 - [hypr-move-to-workspace](https://github.com/BnSplits/hypr-move-to-workspace)
 - [anime-dive](https://github.com/BnSplits/anime-dive)
+- [mpv-bn](https://github.com/BnSplits/mpv-bn)
 - [n-m3u8dl-re-bin-bn](https://github.com/nilaoda/N_m3u8DL-RE)
 
 ---
