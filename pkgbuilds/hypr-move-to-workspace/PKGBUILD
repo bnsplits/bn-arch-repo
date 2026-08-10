@@ -1,30 +1,30 @@
 # Maintainer: BnSplits <bnsp.x0@gmail.com>
-pkgname=hypr-move-to-workspace-git
-_pkgname=${pkgname%-git}
+pkgname=hypr-move-to-workspace
 pkgver=r14.fb918a5
-pkgrel=1
+pkgrel=2
 pkgdesc="A Hyprland utility to move windows between workspaces with optional silent mode"
 arch=('x86_64')
-url="https://github.com/BnSplits/${_pkgname}"
+url="https://github.com/BnSplits/${pkgname}"
 license=('GPL')
 makedepends=('git' 'rustup')
-provides=("${_pkgname}")
-conflicts=("${_pkgname}")
-source=("git+https://github.com/BnSplits/${_pkgname}.git")
+provides=("${pkgname}")
+options=('!emptydirs' '!debug')
+conflicts=("${pkgname}")
+source=("git+https://github.com/BnSplits/${pkgname}.git")
 sha256sums=('SKIP')
 
 pkgver() {
-  cd "$srcdir/${_pkgname}"
+  cd "$srcdir/${pkgname}"
   printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
 build() {
-  cd "$srcdir/${_pkgname}"
+  cd "$srcdir/${pkgname}"
   cargo build --release
 }
 
 package() {
-  cd "$srcdir/${_pkgname}"
-  install -Dm755 "target/release/${_pkgname}" "$pkgdir/usr/bin/${_pkgname}"
-  ln -s "${_pkgname}" "$pkgdir/usr/bin/hmtw"
+  cd "$srcdir/${pkgname}"
+  install -Dm755 "target/release/${pkgname}" "$pkgdir/usr/bin/${pkgname}"
+  ln -s "${pkgname}" "$pkgdir/usr/bin/hmtw"
 }
