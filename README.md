@@ -43,6 +43,6 @@ You can now install packages directly from this repository using `pacman`.
 
 ---
 
-**Maintainer:** [BnSplits](https://github.com/BnSplits)
+**Maintainer:** [BnSplit](https://github.com/BnSplits)
 
 **License:** Same as the upstream projects unless otherwise stated.
