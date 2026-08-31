@@ -1,7 +1,7 @@
 # Maintainer: BnSplits <bnsp.x0@gmail.com>
 pkgname=mpv-bn
 pkgver=0.41.0
-pkgrel=4
+pkgrel=5
 pkgdesc='a free, open source, and cross-platform media player'
 arch=('x86_64')
 license=('GPL-2.0-or-later AND LGPL-2.1-or-later')
