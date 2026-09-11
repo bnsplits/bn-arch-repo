@@ -1,7 +1,7 @@
 # Maintainer: BnSplits <bnsp.x0@gmail.com>
 pkgname=chromafade
-pkgver=r8.82a97f4
-pkgrel=2
+pkgver=r11.9aea69e
+pkgrel=1
 pkgdesc="a Rust CLI tool that generates 16-step color gradients from a hex base using HLS"
 arch=('x86_64')
 url="https://github.com/BnSplits/${pkgname}"
