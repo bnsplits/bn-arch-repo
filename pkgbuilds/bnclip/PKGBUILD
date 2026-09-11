@@ -1,6 +1,6 @@
 # Maintainer: BnSplits <bnsp.x0@gmail.com>
 pkgname=bnclip
-pkgver=r5.db66c7b
+pkgver=r3.b1527cc
 pkgrel=1
 pkgdesc="cliphist-like Wayland clipboard manager with some extras"
 arch=('x86_64')
