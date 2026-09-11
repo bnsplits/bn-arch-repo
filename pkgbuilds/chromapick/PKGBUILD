@@ -1,7 +1,7 @@
 # Maintainer: BnSplits <bnsp.x0@gmail.com>
 pkgname=chromapick
-pkgver=r12.53ca65a
-pkgrel=2
+pkgver=r14.e4705f2
+pkgrel=1
 pkgdesc="a Rust CLI tool that generates 16-step color gradients from a hex base using HLS"
 arch=('x86_64')
 url="https://github.com/BnSplits/${pkgname}"
