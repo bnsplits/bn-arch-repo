@@ -26,13 +26,13 @@ You can now install packages directly from this repository using `pacman`.
 
 ## Packages
 
-- [bnclip](https://github.com/BnSplits/bnclip)
-- [chromafade](https://github.com/BnSplits/chromafade)
-- [chromapick](https://github.com/BnSplits/chromapick)
-- [hypr-go-to-workspace](https://github.com/BnSplits/hypr-go-to-workspace)
-- [hypr-move-to-workspace](https://github.com/BnSplits/hypr-move-to-workspace)
-- [anime-dive](https://github.com/BnSplits/anime-dive)
-- [mpv-bn](https://github.com/BnSplits/mpv-bn)
+- [bnclip](https://github.com/bnsplits/bnclip)
+- [chromafade](https://github.com/bnsplits/chromafade)
+- [chromapick](https://github.com/bnsplits/chromapick)
+- [hypr-go-to-workspace](https://github.com/bnsplits/hypr-go-to-workspace)
+- [hypr-move-to-workspace](https://github.com/bnsplits/hypr-move-to-workspace)
+- [anime-dive](https://github.com/bnsplits/anime-dive)
+- [mpv-bn](https://github.com/bnsplits/mpv-bn)
 - [n-m3u8dl-re-bin-bn](https://github.com/nilaoda/N_m3u8DL-RE)
 
 ---
@@ -44,6 +44,6 @@ You can now install packages directly from this repository using `pacman`.
 
 ---
 
-**Maintainer:** [BnSplit](https://github.com/BnSplits)
+**Maintainer:** [BnSplit](https://github.com/bnsplits)
 
 **License:** Same as the upstream projects unless otherwise stated.
