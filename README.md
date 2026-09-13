@@ -27,6 +27,7 @@ You can now install packages directly from this repository using `pacman`.
 ## Packages
 
 - [bnclip](https://github.com/bnsplits/bnclip)
+- [bnchroma](https://github.com/bnsplits/bnchroma)
 - [chromafade](https://github.com/bnsplits/chromafade)
 - [chromapick](https://github.com/bnsplits/chromapick)
 - [hypr-go-to-workspace](https://github.com/bnsplits/hypr-go-to-workspace)
