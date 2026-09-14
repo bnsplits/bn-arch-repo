@@ -28,13 +28,13 @@ You can now install packages directly from this repository using `pacman`.
 
 - [bnclip](https://github.com/bnsplits/bnclip)
 - [bnchroma](https://github.com/bnsplits/bnchroma)
-- [chromafade](https://github.com/bnsplits/chromafade)
-- [chromapick](https://github.com/bnsplits/chromapick)
-- [hypr-go-to-workspace](https://github.com/bnsplits/hypr-go-to-workspace)
-- [hypr-move-to-workspace](https://github.com/bnsplits/hypr-move-to-workspace)
 - [anime-dive](https://github.com/bnsplits/anime-dive)
 - [mpv-bn](https://github.com/bnsplits/mpv-bn)
 - [n-m3u8dl-re-bin-bn](https://github.com/nilaoda/N_m3u8DL-RE)
+- [chromafade](https://github.com/bnsplits/chromafade) (deprecated)
+- [chromapick](https://github.com/bnsplits/chromapick) (deprecated)
+- [hypr-go-to-workspace](https://github.com/bnsplits/hypr-go-to-workspace) (deprecated)
+- [hypr-move-to-workspace](https://github.com/bnsplits/hypr-move-to-workspace) (deprecated)
 
 ---
 
