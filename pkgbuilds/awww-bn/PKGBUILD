@@ -1,0 +1,65 @@
+# Maintainer: bnsplits <bnsp.x0@gmail.com>
+pkgname=awww-bn
+pkgver=r1377.fa3c4f1
+pkgrel=1
+pkgdesc="An Answer to your Wayland Wallpaper Woes"
+arch=('x86_64')
+url="https://github.com/bnsplits/${pkgname}"
+license=('GPL-3.0-only')
+depends=(
+  'dav1d'
+  'glibc'
+  'libgcc'
+  'lz4'
+)
+makedepends=(
+  'cargo'
+  'git'
+  'scdoc'
+  'wayland'
+  'wayland-protocols'
+)
+provides=('awww')
+conflicts=('awww' 'awww-git' 'swww')
+options=(!lto)
+source=("git+https://github.com/bnsplits/${pkgname}.git")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd "$srcdir/${pkgname}"
+  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+prepare() {
+  cd "$srcdir/${pkgname}"
+  cargo fetch --locked --target "$(rustc --print host-tuple)"
+}
+
+build() {
+  cd "$srcdir/${pkgname}"
+  cargo build --frozen --release --all-features
+
+  # manpages
+  ./doc/gen.sh
+}
+
+check() {
+  cd "$srcdir/${pkgname}"
+  cargo test --frozen --all-features
+}
+
+package() {
+  cd "$srcdir/${pkgname}"
+  install -vDm755 -t "$pkgdir/usr/bin" \
+    target/release/awww \
+    target/release/awww-daemon
+
+  install -vDm644 completions/awww.bash "$pkgdir/usr/share/bash-completion/completions/awww"
+  install -vDm644 completions/awww.fish "$pkgdir/usr/share/fish/vendor_completions.d/awww.fish"
+  install -vDm644 completions/_awww "$pkgdir/usr/share/zsh/site-functions/_awww"
+  install -vDm644 completions/awww.elv "$pkgdir/usr/share/elvish/lib/awww.elv"
+
+  install -vDm644 -t "$pkgdir/usr/share/doc/$pkgname" ./*.md
+  install -vDm644 -t "$pkgdir/usr/share/man/man1" ./doc/generated/*.1
+  install -vDm644 -t "$pkgdir/usr/share/licenses/$pkgname" LICENSE
+}
