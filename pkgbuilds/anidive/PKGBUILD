@@ -1,0 +1,32 @@
+# Maintainer: bnsplits <bnsp.x0@gmail.com>
+pkgname=anidive
+pkgver=r53.9ce8788
+pkgrel=1
+pkgdesc="A simple TUI anime downloader for Linux"
+arch=('x86_64')
+url="https://github.com/bnsplits/${pkgname}"
+license=('GPL-3.0-only')
+depends=('aria2' 'yt-dlp' 'ffmpeg' 'xdg-utils')
+makedepends=('git' 'rust')
+provides=("${pkgname}")
+conflicts=("${pkgname}")
+options=('!lto')
+source=("git+https://github.com/bnsplits/${pkgname}.git")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd "$srcdir/${pkgname}"
+  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+build() {
+  cd "$srcdir/${pkgname}"
+  export AWS_LC_SYS_NO_JITTER_ENTROPY=1
+  cargo build --release --locked
+}
+
+package() {
+  cd "$srcdir/${pkgname}"
+  install -Dm755 "target/release/${pkgname}" "$pkgdir/usr/bin/${pkgname}"
+  install -Dm644 LICENSE "$pkgdir/usr/share/licenses/${pkgname}/LICENSE"
+}
