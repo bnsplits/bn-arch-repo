@@ -1,6 +1,6 @@
 # Maintainer: BnSplits <bnsp.x0@gmail.com>
 pkgname=bnchroma
-pkgver=r4.3078b13
+pkgver=r5.0b8abb1
 pkgrel=1
 pkgdesc="Wallpaper-to-app theming in one command: palette, gradient, templates"
 arch=('x86_64')
