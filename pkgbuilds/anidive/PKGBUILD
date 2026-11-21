@@ -1,6 +1,6 @@
 # Maintainer: bnsplits <bnsp.x0@gmail.com>
 pkgname=anidive
-pkgver=r53.9ce8788
+pkgver=r58.e9dbb07
 pkgrel=1
 pkgdesc="A simple TUI anime downloader for Linux"
 arch=('x86_64')
