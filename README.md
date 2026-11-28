@@ -31,7 +31,7 @@ You can now install packages directly from this repository using `pacman`.
 - [bnclip](https://github.com/bnsplits/bnclip)
 - [bnchroma](https://github.com/bnsplits/bnchroma)
 - [awww-bn](https://github.com/bnsplits/awww-bn)
-- [n-m3u8dl-re-bin-bn](https://github.com/nilaoda/N_m3u8DL-RE)
+- [n-m3u8dl-re-bin-bn](https://github.com/nilaoda/N_m3u8DL-RE) (deprecated)
 - [mpv-bn](https://github.com/bnsplits/mpv-bn) (deprecated)
 - [chromafade](https://github.com/bnsplits/chromafade) (deprecated)
 - [chromapick](https://github.com/bnsplits/chromapick) (deprecated)
